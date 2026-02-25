@@ -21,35 +21,35 @@
 #define NODEMCU
 
 #ifdef NODEMCU
-  // LED (Menggunakan angka GPIO murni untuk menghindari error mapping)
+  // LED (GPIO Murni)
   #define LED_NEOPIXEL_GRB
   #define LED_NUM 1
-  #define LED_NEOPIXEL_PIN 15 // D8 adalah GPIO15
+  #define LED_NEOPIXEL_PIN 15 // GPIO15 = D8
   #define LED_MODE_BRIGHTNESS 10
   
-  // Display (SH1106 I2C)
+  // Display Configuration (SH1106 I2C)
   #define USE_DISPLAY true
   #define FLIP_DIPLAY true
   #define SH1106_I2C       
   #define I2C_ADDR 0x3C
-  #define I2C_SDA 4        // D2 adalah GPIO4
-  #define I2C_SCL 5        // D1 adalah GPIO5
+  #define I2C_SDA 4        // GPIO4 = D2
+  #define I2C_SCL 5        // GPIO5 = D1
   #define DISPLAY_TEXT "WifiX v1.5"
   #define INTRO_STR "WifiX v1.5"
 
   // Buttons
-  #define BUTTON_UP 14     // D5 adalah GPIO14
-  #define BUTTON_DOWN 12   // D6 adalah GPIO12
-  #define BUTTON_A 2       // D4 adalah GPIO2
-  #define BUTTON_B 0       // D3 adalah GPIO0
+  #define BUTTON_UP 14     // GPIO14 = D5
+  #define BUTTON_DOWN 12   // GPIO12 = D6
+  #define BUTTON_A 2       // GPIO2  = D4
+  #define BUTTON_B 0       // GPIO0  = D3
   
   #define RESET_BUTTON 0   
 #endif
 
 // ==========================================
-// 3. NETWORK & WEB (FIXED FORMAT FOR WIFI.CPP)
+// 3. NETWORK & WEB (FIXED FORMAT)
 // ==========================================
-// PENTING: Gunakan kurung kurawal {} untuk array IPAddress
+// Format array {} wajib untuk IPAddress agar tidak error di wifi.cpp
 #define AP_SSID "#WifiX.1.5#"
 #define AP_PASSWD "deauther"
 #define AP_HIDDEN false
