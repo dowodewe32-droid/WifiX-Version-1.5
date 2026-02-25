@@ -1,20 +1,16 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-// =========================================
-// 1. SYSTEM & VERSION
-// =========================================
+// VERSIONING
 #define DEAUTHER_VERSION "2.6.1"
 #define DEAUTHER_VERSION_MAJOR 2
 #define DEAUTHER_VERSION_MINOR 6
 #define DEAUTHER_VERSION_REVISION 1
 #define EEPROM_SIZE 4095
+#define BOOT_COUNTER_ADDR 1   // FIX: Diperlukan oleh WifiXv1.5.ino
 #define SETTINGS_ADDR 100
-#define BOOT_COUNTER_ADDR 1  // FIX: Ditambahkan untuk error 1000197463.jpg
 
-// =========================================
-// 2. HARDWARE (NODEMCU)
-// =========================================
+// HARDWARE (NodeMCU)
 #define NODEMCU
 #define NYALA 1
 #define MATI 0
@@ -39,11 +35,9 @@
 #define BUTTON_DOWN 12
 #define BUTTON_A 2
 #define BUTTON_B 0
-#define RESET_BUTTON 0      // FIX: Ditambahkan untuk error 1000197463.jpg
+#define RESET_BUTTON 0       // FIX: Diperlukan oleh WifiXv1.5.ino
 
-// =========================================
-// 3. NETWORK & WEB
-// =========================================
+// NETWORK
 #define AP_SSID "#WifiX.1.5#"
 #define AP_PASSWD "deauther"
 #define AP_HIDDEN 0
@@ -55,33 +49,28 @@
 #define WEB_USE_SPIFFS 0
 #define DEFAULT_LANG "en"
 
-// =========================================
-// 4. ATTACK & SNIFFER DEFAULTS
-// =========================================
+// ATTACK SETTINGS
 #define ATTACK_ALL_CH 0
 #define RANDOM_TX 0
 #define ATTACK_TIMEOUT 0
 #define DEAUTHS_PER_TARGET 25
 #define DEAUTH_REASON 1
-#define PROBE_FRAMES_PER_SSID 1 // FIX: Ditambahkan untuk error 1000197463.jpg
+#define PROBE_FRAMES_PER_SSID 1 // FIX: Diperlukan oleh settings.cpp
 #define CH_TIME 200
-#define MIN_DEAUTH_FRAMES 3     // FIX: Ditambahkan untuk error 1000197463.jpg
+#define MIN_DEAUTH_FRAMES 3     // FIX: Diperlukan oleh settings.cpp
 
-// =========================================
-// 5. CLI & FEATURES
-// =========================================
+// SYSTEM FEATURES
 #define CLI_ENABLED 1
-#define CLI_ECHO 1               // FIX: Ditambahkan untuk error 1000197463.jpg
+#define CLI_ECHO 1               // FIX: Diperlukan oleh settings.cpp
 #define ENABLE_REPEATER 1
 #define DISPLAY_TIMEOUT 600
 
-// =========================================
-// 6. DEBUG & COLORS
-// =========================================
+// DEBUG
 #define ENABLE_DEBUG
 #define DEBUG_PORT Serial
 #define DEBUG_BAUD 115200
 
+// LED COLORS
 #define LED_MODE_OFF 0,0,0
 #define LED_MODE_SCAN 0,0,255
 #define LED_MODE_ATTACK 255,0,0
