@@ -3,6 +3,12 @@
 #pragma once
 
 #include <cstdint>
+#include "config.h"
+
+// WAJIB: Panggil library NeoPixel di sini
+#ifdef LED_NEOPIXEL
+    #include <Adafruit_NeoPixel.h>
+#endif
 
 enum LED_MODE {
     OFF,
