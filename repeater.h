@@ -3,17 +3,18 @@
 
 #include <Arduino.h>
 
+// Pastikan namespace ini murni C++ agar tidak kena error "template with C linkage"
 namespace repeater {
-    // Fungsi untuk menyimpan kredensial repeater
+    // Dipanggil untuk menyimpan SSID dan Password target yang akan diperkuat (repeat)
     void connect(String ssid, String pass);
     
-    // Fungsi utama untuk menjalankan mode NAPT/Repeater
+    // Fungsi eksekusi utama untuk mengaktifkan mode NAPT
     void run();
     
-    // Mengecek apakah mode repeater aktif
+    // Fungsi untuk mengecek apakah mode repeater sedang berjalan
     bool status();
     
-    // Mengubah status aktif/non-aktif repeater
+    // Fungsi untuk memperbarui variabel status (true/false)
     void update_status(bool s);
 }
 
