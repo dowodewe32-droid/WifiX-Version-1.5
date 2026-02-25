@@ -20,12 +20,18 @@
 // ==========================================
 #define NODEMCU
 
+// Definisi NYALA/MATI (FIX ERROR 1000197456.jpg)
+#define NYALA HIGH
+#define MATI LOW
+#define STROBE 2
+
 #ifdef NODEMCU
-  // LED (Pake GPIO murni agar tidak bentrok linkage)
+  // LED (GPIO Murni)
   #define LED_NEOPIXEL_GRB
   #define LED_NUM 1
   #define LED_NEOPIXEL_PIN 15 // D8
   #define LED_MODE_BRIGHTNESS 10
+  #define USE_LED true        // FIX ERROR USE_LED
   
   // Display (SH1106 I2C)
   #define USE_DISPLAY true
@@ -47,7 +53,7 @@
 #endif
 
 // ==========================================
-// 3. NETWORK & WEB (STRICT FORMAT)
+// 3. NETWORK & WEB
 // ==========================================
 #define AP_SSID "#WifiX.1.5#"
 #define AP_PASSWD "deauther"
@@ -81,11 +87,11 @@
 #define ENABLE_REPEATER true
 #define DISPLAY_TIMEOUT 600
 
-#ifndef STROBE
-  #define STROBE 2
-#endif
+#define ENABLE_DEBUG
+#define DEBUG_PORT Serial
+#define DEBUG_BAUD 115200
 
-// LED Colors (RGB format)
+// LED Colors
 #define LED_MODE_OFF 0, 0, 0
 #define LED_MODE_SCAN 0, 0, 255
 #define LED_MODE_ATTACK 255, 0, 0
