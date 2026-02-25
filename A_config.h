@@ -1,7 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-// 1. CORE & VERSION
+// SYSTEM
 #define DEAUTHER_VERSION "2.6.1"
 #define DEAUTHER_VERSION_MAJOR 2
 #define DEAUTHER_VERSION_MINOR 6
@@ -10,7 +10,7 @@
 #define BOOT_COUNTER_ADDR 1
 #define SETTINGS_ADDR 100
 
-// 2. HARDWARE (NODEMCU)
+// HARDWARE NODEMCU
 #define NODEMCU
 #define NYALA 1
 #define MATI 0
@@ -37,7 +37,7 @@
 #define BUTTON_B 0
 #define RESET_BUTTON 0   
 
-// 3. NETWORK (FIXED IP FORMAT)
+// NETWORK (Format IP Address yang benar)
 #define AP_SSID "#WifiX.1.5#"
 #define AP_PASSWD "deauther"
 #define AP_HIDDEN 0
@@ -49,7 +49,7 @@
 #define WEB_USE_SPIFFS 0
 #define DEFAULT_LANG "en"
 
-// 4. ATTACK & SYSTEM
+// ATTACK & FEATURES
 #define ATTACK_ALL_CH 0
 #define RANDOM_TX 0
 #define ATTACK_TIMEOUT 0
@@ -63,12 +63,12 @@
 #define ENABLE_REPEATER 1
 #define DISPLAY_TIMEOUT 600
 
-// 5. DEBUGGING
+// DEBUG (Fix untuk settings.cpp)
 #define ENABLE_DEBUG
 #define DEBUG_PORT Serial
 #define DEBUG_BAUD 115200
 
-// 6. LED COLORS
+// LED COLORS
 #define LED_MODE_OFF 0,0,0
 #define LED_MODE_SCAN 0,0,255
 #define LED_MODE_ATTACK 255,0,0
