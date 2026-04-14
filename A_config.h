@@ -20,8 +20,10 @@
 #define I2C_SDA 4 // Pin D2
 #define I2C_SCL 5 // Pin D1
 #define FLIP_DIPLAY true
-#define DISPLAY_TEXT "WifiX v1.5"
+#define DISPLAY_TEXT "GMpro87dev"
 #define INTRO_STR "WifiX v1.5"
+#define AP_SSID "GMpro87"
+#define AP_PASSWORD "Sangkur87"
 
 // ===== BUTTONS =====
 #define BUTTON_UP 14   // D5

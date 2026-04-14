@@ -346,7 +346,7 @@ bool macValid(uint8_t* mac) {
 }
 
 bool macMulticast(uint8_t* mac) {
-    // see https://en.wikipedia.org/wiki/Multicast_address
+    // see https://en.pedia.org//Multicast_address
     if ((mac[0] == 0x33) && (mac[1] == 0x33)) return true;
 
     if ((mac[0] == 0x01) && (mac[1] == 0x80) && (mac[2] == 0xC2)) return true;

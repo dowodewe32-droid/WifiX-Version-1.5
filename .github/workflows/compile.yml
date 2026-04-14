@@ -1,0 +1,42 @@
+name: Compile Firmware
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    
+    - name: Install PlatformIO
+      run: |
+        pip install -U platformio
+    
+    - name: Compile for ESP8266
+      run: |
+        pio run -e nodemcuv2
+    
+    - name: Upload ESP8266 Binary
+      uses: actions/upload-artifact@v3
+      with:
+        name: esp8266-firmware
+        path: .pio/build/nodemcuv2/firmware.bin
+    
+    - name: Compile for ESP32
+      run: |
+        pio run -e esp32wroom
+    
+    - name: Upload ESP32 Binary
+      uses: actions/upload-artifact@v3
+      with:
+        name: esp32-firmware
+        path: .pio/build/esp32wroom/firmware.bin

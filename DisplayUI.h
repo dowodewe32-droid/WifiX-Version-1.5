@@ -190,7 +190,7 @@ class DisplayUI {
         // draw functions
         void draw(bool force = false);
         void drawButtonTest();
-        void drawDeauthAll();
+        void drawTrueDeauth();
         void drawMenu();
         void drawLoadingScan();
         void drawPacketMonitor();

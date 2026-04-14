@@ -79,7 +79,7 @@ static long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s) {
 
 ////////////////////////////////////////////////////////////////////////////////
 // DateTime implementation - ignores time zones and DST changes
-// NOTE: also ignores leap seconds, see http://en.wikipedia.org/wiki/Leap_second
+// NOTE: also ignores leap seconds, see http://en.pedia.org//Leap_second
 
 DateTime::DateTime(uint32_t t) {
     t -= SECONDS_FROM_1970_TO_2000; // bring to 2000 timestamp from 1970

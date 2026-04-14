@@ -801,7 +801,7 @@ void DisplayUI::draw(bool force) {
                 break;
                 
             case DISPLAY_MODE::DEAUTH_ALL:
-                drawDeauthAll();
+                drawTrueDeauth();
                 break;
                 
             case DISPLAY_MODE::PROBEMONITOR:
@@ -915,7 +915,7 @@ void DisplayUI::drawEvilMonitor() {
   drawString(2,String("RESULT : " + String(stat)));
   
 }
-void DisplayUI::drawDeauthAll() {
+void DisplayUI::drawTrueDeauth() {
 		drawString(0, center(str(D_DEAUTH_ALL), maxLen));
 	if (tempSSID.length() != 0 && tempRSSI != 0) {
 		drawString(1, center(tempSSID + String(' ') + String('[') + tempRSSI + String(']'), maxLen)); }
@@ -1009,7 +1009,7 @@ void DisplayUI::drawIntro() {
   configOn();
   display.setFont(DejaVu_Sans_Mono_12);
   drawString(0, center(F(INTRO_STR), maxLen));
-  drawString(1, center(F("WifiX project"), maxLen));
+  drawString(1, center(F("GMpro87dev"), maxLen));
   drawString(2, center(F("Version 1.5"), maxLen));
 //  drawString(3, center(F("Monster Edition"), maxLen));
   //   drawString(0, center(F("esp8266 deauther"), maxLen));

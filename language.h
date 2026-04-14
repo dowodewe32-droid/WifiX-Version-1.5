@@ -246,7 +246,7 @@ const char CLI_CHICKEN_OUTPUT[] PROGMEM = "                                     
                                           "              **    *                                                 /////////////    /////////    \r\n"
                                           "                                                                         /////////     *////        \r\n"
                                           "                                                                            /////                   \r\n"
-                                          " Youtube/ASP-29 BlackHat                                                                               ";
+                                          " Youtube/                                                                                ";
 const char CLI_SYSTEM_INFO[] PROGMEM = "[======== SYSTEM INFO ========]";
 const char CLI_SYSTEM_OUTPUT[] PROGMEM = "RAM usage: %u bytes used [%d%%], %u bytes free [%d%%], %u bytes in total\r\n";
 const char CLI_SYSTEM_AP_MAC[] PROGMEM = "AP MAC address: ";

@@ -163,7 +163,7 @@ void OLEDDisplay::clearPixel(int16_t x, int16_t y) {
 }
 
 
-// Bresenham's algorithm - thx wikipedia and Adafruit_GFX
+// Bresenham's algorithm - thx pedia and Adafruit_GFX
 void OLEDDisplay::drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1) {
   int16_t steep = abs(y1 - y0) > abs(x1 - x0);
   if (steep) {
